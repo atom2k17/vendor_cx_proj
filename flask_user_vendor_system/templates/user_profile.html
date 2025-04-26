@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block title %}User Profile{% endblock %}
+{% block content %}
+<h2>Complete Your User Profile</h2>
+<form method="POST">
+    <input name="profession" class="form-control" placeholder="Profession"><br>
+    <input name="skills" class="form-control" placeholder="Skills"><br>
+    <select name="experience_level" class="form-control">
+        <option value="Beginner">Beginner</option>
+        <option value="Intermediate">Intermediate</option>
+        <option value="Expert">Expert</option>
+    </select><br>
+    <input name="project_software" class="form-control" placeholder="e.g., SolidWorks, ANSYS"><br>
+    <select name="service_type" class="form-control">
+        <option value="CAD">CAD</option>
+        <option value="CAE">CAE</option>
+        <option value="Embedded">Embedded</option>
+        <option value="PLA">PLM</option>
+    </select><br>
+    <button type="submit" class="btn btn-success">Save Profile</button>
+</form>
+{% endblock %}

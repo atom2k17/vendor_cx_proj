@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block title %}Search{% endblock %}
+{% block content %}
+<h2>Find the Right Vendor</h2>
+<form method="POST">
+    <input class="form-control" name="requirement" placeholder="What do you need?"><br>
+    <input class="form-control" name="tags" placeholder="e.g., CAD, thermal, simulation"><br>
+    <button class="btn btn-primary" type="submit">Search</button>
+</form>
+{% endblock %}

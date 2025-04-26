@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% block title %}Complete Vendor Profile{% endblock %}
+
+{% block content %}
+<div class="d-flex justify-content-center align-items-center vh-100">
+  <div class="card p-4 shadow" style="width: 100%; max-width: 500px;">
+    <h2 class="text-center mb-4">Complete Vendor Profile</h2>
+    <form method="POST">
+      <div class="mb-3">
+        <label>Business Name:</label>
+        <input type="text" class="form-control" name="business_name" required>
+      </div>
+      <div class="mb-3">
+        <label>Win Stories / Experience Summary:</label>
+        <textarea class="form-control" name="win_stories" rows="3" placeholder="Describe your experience..." required></textarea>
+      </div>
+      <div class="mb-3">
+        <label>Tags (comma-separated):</label>
+        <input type="text" class="form-control" name="tags" placeholder="e.g., CAD, simulation, thermal analysis">
+      </div>
+      <div class="mb-3">
+        <label>Rating (1.0 to 5.0):</label>
+        <input type="number" class="form-control" name="rating" step="0.1" min="1" max="5" placeholder="4.5">
+      </div>
+      <div class="d-grid">
+        <button class="btn btn-success" type="submit">Save Profile</button>
+      </div>
+    </form>
+  </div>
+</div>
+{% endblock %}
