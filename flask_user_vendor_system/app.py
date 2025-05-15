@@ -103,6 +103,7 @@ class UserProfile(db.Model):
     # New fields
     project_software = db.Column(db.String(200))  # e.g., "SolidWorks, ANSYS, MATLAB"
     service_type = db.Column(db.String(100))  # e.g., "CAD", "CAE", "Embedded", "PLA"
+    phone = db.Column(db.String(20))
 
 class VendorProfile(db.Model):
     id = db.Column(db.Integer, primary_key=True)
@@ -208,9 +209,10 @@ def user_complete_profile():
     if request.method == 'POST':
         profile = UserProfile(
             user_id=session['user_id'],
-            profession=request.form['profession'],
-            skills=request.form['skills'],
-            experience_level=request.form['experience_level'],
+            profession=request.form['Company name'],
+            skills=request.form['Industry'],
+            #experience_level=request.form['experience_level'],
+            phone=request.form['phone'],
             project_software=request.form['project_software'],
             service_type=request.form['service_type']
         )
